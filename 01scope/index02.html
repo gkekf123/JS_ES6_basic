@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>목록1</li>
+      <li>목록2</li>
+      <li>목록3</li>
+      <li>목록4</li>
+    </ul>
+
+    <script>
+      var li = document.querySelectorAll("li");
+      li[0];
+
+      // i = 0, 1, 2, 3...
+      // 인덱스 = let
+      for (let i = 0; i < li.length; i++) {
+        li[i].addEventListener("click", function () {
+          console.log(i); // 4, 4, 4, 4
+        });
+      }
+      //   console.log(i); // 4, 4, 4, 4 실행 안됨
+    </script>
+  </body>
+</html>

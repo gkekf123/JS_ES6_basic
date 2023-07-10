@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  익명 함수
+        // var a = function() {
+        //     console.log("a실행")
+        // }
+        // a() // 함수 호출 -> a실행
+
+        // 화살표 함수
+        let a = () => {
+            console.log("a실행")
+        }
+        a()
+
+      console.log("=========================");
+
+        // 문법 1 : 작성할 코드가 한줄이면 {}는 생략 가능
+        // {}를 사용하지 않으면 기본값 undefined이 반환
+        // {}를 쓰지않고 구문을 작성하면 자동으로 리턴값
+
+        let b = (x) => console.log(x) //  == return console.log(x)
+        // b(10) // 10
+        console.log(b(10)) // undefined
+
+        let c = (x) => x + 10 // return x + 10;
+        console.log(c(10)) // 20
+
+        // let c = (x) => {
+        //     return x + 10
+        // }
+
+      console.log("=========================");
+
+
+        // 문법 2 : 매개변수가 1개라면 () 생락 가능
+        let d = x => x * 10
+        console.log(d(3)) // 30
+
+        let e = (x = 10, y = 20) => x * y // default 매개변수
+        console.log(e()) // 200
+
+      console.log("=========================");
+
+        // 문법 3 : 객체를 반환할 때 ()를 묶어 준다
+        // let f = () => {
+        //     return {name:"홍길동"}
+        // }
+        // console.log(f()) // {name: '홍길동'}
+
+        let f = () => ({name : "홍길동"}) // 객체 리턴
+        console.log(f()) // {name: '홍길동'}
+
+        
+    </script>
+</body>
+</html>
